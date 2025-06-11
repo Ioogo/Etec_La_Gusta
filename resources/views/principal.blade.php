@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Se louco, ter que refazer a etec é zoado</title>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"/>
+
         <style>
             .home-banner {
                 background-image: url('/imagens/BLOCO-A.jpg'); 
@@ -71,6 +72,12 @@
             .card-custom a:hover {
                 color: #ffb3b3;
             }
+
+            .cadastros {
+                display: flex;
+                align-items: end;
+            }
+            
         </style>
     </head>
     <body>
@@ -95,6 +102,42 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-disabled="true" href="https://www.youtube.com/watch?v=mKPeEpUbzlA">Vasco</a>
+                        </li>
+                        
+                        <li>
+                        @if (Route::has('login'))
+                <nav class="flex items-center justify-end gap-4">
+                    @auth
+                        <a
+                            href="{{ url('/dashboard') }}"
+                            class="nav-link" aria-disabled="true">                        
+                            Dashboard
+                        </a>
+                    @else
+                    </li>
+                    <div class="cadastros">
+                        <li>
+                            <a
+                                href="{{ route('login') }}"
+                                class="nav-link" aria-disabled="true"
+                            >
+                                Log in
+                            </a>
+                        </li>
+                        <li>
+                            @if (Route::has('register'))
+                                <a
+                                    href="{{ route('register') }}"
+                                    class="nav-link" aria-disabled="true">
+                                    Register
+                                </a>
+                            @endif
+                        @endauth
+                        </li>
+                    </div>
+                    
+                </nav>
+            @endif
                         </li>
                     </ul>
                 </div>

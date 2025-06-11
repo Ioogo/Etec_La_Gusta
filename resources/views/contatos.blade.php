@@ -47,6 +47,38 @@
                         <li class="nav-item">
                             <a class="nav-link" aria-disabled="true" href="https://www.youtube.com/watch?v=mKPeEpUbzlA">Vasco</a>
                         </li>
+                        <li>
+                        @if (Route::has('login'))
+                <nav class="flex items-center justify-end gap-4">
+                    @auth
+                        <a
+                            href="{{ url('/dashboard') }}"
+                            class="nav-link" aria-disabled="true">                        
+                            Dashboard
+                        </a>
+                    @else
+                    </li>
+                    <li>
+                        <a
+                            href="{{ route('login') }}"
+                            class="nav-link" aria-disabled="true"
+                        >
+                            Log in
+                        </a>
+                    </li>
+                    <li>
+                        @if (Route::has('register'))
+                            <a
+                                href="{{ route('register') }}"
+                                class="nav-link" aria-disabled="true">
+                                Register
+                            </a>
+                        @endif
+                    @endauth
+                    </li>
+                </nav>
+            @endif
+                        </li>
                     </ul>
                 </div>
             </div>

@@ -41,7 +41,7 @@
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom">
             <div class="container-fluid">
                 <a class="navbar-brand" href="/"><img src="/imagens/Etec_logo.svg" alt="Logo" height="40" width="100"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -60,6 +60,38 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" aria-disabled="true" href="https://www.youtube.com/watch?v=mKPeEpUbzlA">Vasco</a>
+                        </li>
+                        <li>
+                        @if (Route::has('login'))
+                <nav class="flex items-center justify-end gap-4">
+                    @auth
+                        <a
+                            href="{{ url('/dashboard') }}"
+                            class="nav-link" aria-disabled="true">                        
+                            Dashboard
+                        </a>
+                    @else
+                    </li>
+                    <li>
+                        <a
+                            href="{{ route('login') }}"
+                            class="nav-link" aria-disabled="true"
+                        >
+                            Log in
+                        </a>
+                    </li>
+                    <li>
+                        @if (Route::has('register'))
+                            <a
+                                href="{{ route('register') }}"
+                                class="nav-link" aria-disabled="true">
+                                Register
+                            </a>
+                        @endif
+                    @endauth
+                    </li>
+                </nav>
+            @endif
                         </li>
                     </ul>
                 </div>
