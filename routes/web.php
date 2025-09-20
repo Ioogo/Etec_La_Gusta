@@ -3,10 +3,7 @@
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PrincipalController;
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
-=======
 use Illuminate\Http\Request;
->>>>>>> fb0a5e9 (Quero me matar)
 
 Route::get('/', function () {
     return view('principal');
@@ -22,12 +19,12 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-<<<<<<< HEAD
+
 Route::get('/contatos', function () { return PrincipalController::contatos();})->name('contatos');
 Route::get('/cursos', function () { return PrincipalController::cursos();})->name('cursos');
 Route::get('/departamentos', function () { return PrincipalController::departamentos();})->name('departamentos');
 
-=======
+
 Route::match(['get', 'post'], '/contatos', function (Request $request) {
     $dados = null;
 
@@ -52,5 +49,5 @@ Route::match(['get', 'post'], '/contatos', function (Request $request) {
 
     return view('contatos', compact('dados'));
 })->name('contatos');
->>>>>>> fb0a5e9 (Quero me matar)
+
 require __DIR__.'/auth.php';
