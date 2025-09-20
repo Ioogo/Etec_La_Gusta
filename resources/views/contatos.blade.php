@@ -86,6 +86,7 @@
 
     <div class="container mt-5">
         <h2>Formulário de Cadastro</h2>
+<<<<<<< HEAD
         <form>
             <div class="mb-3">
                 <label for="nome" class="form-label">Nome</label>
@@ -102,11 +103,39 @@
             <div class="mb-3">
                 <label for="time" class="form-label">Time</label>
                 <input type="text" class="form-control" id="nome" placeholder="Digite seu time, se não for Vasco vai pro caralho">
+=======
+        <form action="{{ route('contatos') }}" method="POST">
+    @csrf
+            <div class="mb-3">
+                <label for="nome" class="form-label">Nome</label>
+                <input name = "nome" type="text" class="form-control" id="nome" placeholder="Digite seu nome">
+            </div>            
+            <div class="mb-3">
+                <label for="email" class="form-label">E-mail</label>
+                <input name = "email" type="email" class="form-control" id="email" placeholder="Digite seu e-mail">
+            </div>            
+            <div class="mb-3">
+                <label for="senha" class="form-label">Senha</label>
+                <input name = "senha" type="password" class="form-control" id="senha" placeholder="Digite sua senha">
+            </div>  
+            <div class="mb-3">
+                <label for="time" class="form-label">Time</label>
+                <input name = "time" type="text" class="form-control" id="nome" placeholder="Digite seu time, se não for Vasco vai pro caralho">
+>>>>>>> fb0a5e9 (Quero me matar)
             </div>  
             <button type="submit" class="btn btn-primary">Cadastrar</button>
         </form>
     </div>
+<<<<<<< HEAD
 
+=======
+<hr>
+    <h3>Dados enviados:</h3>
+    <pre>
+        @php
+            var_dump($dados);
+        @endphp
+>>>>>>> fb0a5e9 (Quero me matar)
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
     </body>

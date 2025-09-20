@@ -6233,6 +6233,7 @@
         },
         {
             "name": "laravel/breeze",
+<<<<<<< HEAD
             "version": "v2.3.6",
             "source": {
                 "type": "git",
@@ -6243,6 +6244,18 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/laravel/breeze/zipball/390cbc433cb72fa6050965000b2d56c9ba6fd713",
                 "reference": "390cbc433cb72fa6050965000b2d56c9ba6fd713",
+=======
+            "version": "v2.3.8",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/laravel/breeze.git",
+                "reference": "1a29c5792818bd4cddf70b5f743a227e02fbcfcd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/laravel/breeze/zipball/1a29c5792818bd4cddf70b5f743a227e02fbcfcd",
+                "reference": "1a29c5792818bd4cddf70b5f743a227e02fbcfcd",
+>>>>>>> fb0a5e9 (Quero me matar)
                 "shasum": ""
             },
             "require": {
@@ -6290,7 +6303,11 @@
                 "issues": "https://github.com/laravel/breeze/issues",
                 "source": "https://github.com/laravel/breeze"
             },
+<<<<<<< HEAD
             "time": "2025-03-06T14:02:32+00:00"
+=======
+            "time": "2025-07-18T18:49:59+00:00"
+>>>>>>> fb0a5e9 (Quero me matar)
         },
         {
             "name": "laravel/pail",
@@ -9064,12 +9081,21 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
+<<<<<<< HEAD
     "stability-flags": [],
+=======
+    "stability-flags": {},
+>>>>>>> fb0a5e9 (Quero me matar)
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
         "php": "^8.2"
     },
+<<<<<<< HEAD
     "platform-dev": [],
     "plugin-api-version": "2.3.0"
+=======
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
+>>>>>>> fb0a5e9 (Quero me matar)
 }
